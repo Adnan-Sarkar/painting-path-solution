@@ -16,7 +16,7 @@ const Review = () => {
         };
         console.log(reviewData);
 
-        const url = `http://localhost:4000/addReview`;
+        const url = `https://painting-path-solution-server.herokuapp.com/addReview`;
         fetch(url, {
             method: "POST",
             headers: {

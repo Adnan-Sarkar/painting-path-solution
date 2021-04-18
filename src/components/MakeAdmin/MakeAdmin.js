@@ -13,7 +13,7 @@ const MakeAdmin = () => {
         email: data.admin
         };
         
-        const url = `http://localhost:4000/addAdmin`;
+        const url = `https://painting-path-solution-server.herokuapp.com/addAdmin`;
         fetch(url, {
             method: 'POST',
             headers: {

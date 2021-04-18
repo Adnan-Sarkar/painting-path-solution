@@ -14,6 +14,7 @@ import Orders from "./components/Orders/Orders";
 import Review from "./components/Review/Review";
 import ManageServices from "./components/ManageServices/ManageServices";
 import OrderList from "./components/OrderList/OrderList";
+import NotFound from "./components/NotFound/NotFound";
 
 export const UserContext = createContext();
 
@@ -55,6 +56,9 @@ function App() {
                         </PrivateRoute>
                         <Route path="/login">
                             <Login />
+                        </Route>
+                        <Route path="*">
+                            <NotFound />
                         </Route>
                     </Switch>
                     <Footer />

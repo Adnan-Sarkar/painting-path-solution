@@ -8,7 +8,7 @@ const Orders = () => {
 
     useEffect(() => {
         fetch(
-            `http://localhost:4000/orders?email=${sessionStorage.getItem(
+            `https://painting-path-solution-server.herokuapp.com/orders?email=${sessionStorage.getItem(
                 "email"
             )}`
         )

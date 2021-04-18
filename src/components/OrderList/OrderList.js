@@ -11,7 +11,7 @@ import DashBoardHeader from "../DashBoardHeader/DashBoardHeader";
 const OrderList = () => {
     const pendingOrder = (id) => {
         const status = { status: "Pending" };
-        fetch(`http://localhost:4000/updateStatus/${id}`, {
+        fetch(`https://painting-path-solution-server.herokuapp.com/updateStatus/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(status),
@@ -24,7 +24,7 @@ const OrderList = () => {
 
     const onGoingOrder = (id) => {
         const status = { status: "On Going" };
-        fetch(`http://localhost:4000/updateStatus/${id}`, {
+        fetch(`https://painting-path-solution-server.herokuapp.com/updateStatus/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(status),
@@ -36,7 +36,7 @@ const OrderList = () => {
     };
     const doneOrder = (id) => {
         const status = { status: "Done" };
-        fetch(`http://localhost:4000/updateStatus/${id}`, {
+        fetch(`https://painting-path-solution-server.herokuapp.com/updateStatus/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(status),
@@ -50,7 +50,7 @@ const OrderList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:4000/ordersList`)
+        fetch(`https://painting-path-solution-server.herokuapp.com/ordersList`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [orders]);

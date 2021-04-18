@@ -16,7 +16,7 @@ const DashBoard = () => {
         price: data.price
         };
         
-        const url = `http://localhost:4000/addService`;
+        const url = `https://painting-path-solution-server.herokuapp.com/addService`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -31,7 +31,7 @@ const DashBoard = () => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:4000/isAdmin', {
+        fetch('https://painting-path-solution-server.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: sessionStorage.getItem('email') })

@@ -6,7 +6,7 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const ManageServices = () => {
     const deleteService = (id) => {
-        fetch(`http://localhost:4000/delete/${id}`, {
+        fetch(`https://painting-path-solution-server.herokuapp.com/delete/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -18,7 +18,7 @@ const ManageServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:4000/services`)
+        fetch(`https://painting-path-solution-server.herokuapp.com/services`)
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, [services]);
