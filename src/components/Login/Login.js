@@ -47,6 +47,7 @@ const Login = () => {
     const setUserName = firebase.auth().onAuthStateChanged(() => {
         sessionStorage.setItem("name", loggedInUser?.name);
     });
+    
 
     return (
         <div className="container text-center">
